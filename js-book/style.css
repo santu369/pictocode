@@ -1,0 +1,494 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@800&family=Source+Sans+Pro:wght@700&display=swap");
+
+/* colors setup */
+
+:root {
+  --main-background: #203354;
+  --center-circle: #3e4d6c;
+  --notebook: #eaeaea;
+  --notebook-lines: #7d7d7d;
+  --js-book: #f0da50;
+  --js-book-bottom: #ddd7c7;
+  --js-book-text: #32332e;
+  --js-book-shadow: rgba(214, 215, 220);
+  --pen: #5ec4ae;
+  --keyboard: #5b6e7f;
+  --keyboard-top: #97d5c8;
+  --keyboard-buttons: #5cbfab;
+  --mouse-wire: #e54f34;
+  --mouse: #e6e6e6;
+  --mouse-border: #425073;
+  --white: #fff;
+}
+
+/* default setup */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--white);
+  font-family: "Noto Sans JP", sans-serif;
+  user-select: none;
+}
+
+main {
+  background-color: var(--main-background);
+  overflow: hidden;
+  width: 1024px;
+  height: 576px;
+  position: relative;
+}
+
+.center-circle {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  top: 68px;
+  left: 330px;
+  border-radius: 50%;
+  background-color: var(--center-circle);
+}
+
+.notebook {
+  position: absolute;
+  top: 0;
+  left: 120px;
+  width: 351px;
+  height: 394px;
+  background-color: var(--notebook);
+  transform: rotate(-35deg);
+  border-radius: 15px;
+}
+
+.notebook-lines {
+  position: absolute;
+  width: 306px;
+  height: 363px;
+  top: 20px;
+  left: 32px;
+  border-radius: 15px;
+  border: 1px solid var(--notebook-lines);
+}
+
+.notebook-line {
+  position: absolute;
+  height: 1px;
+  width: 306px;
+  left: 0;
+  background-color: var(--notebook-lines);
+}
+
+.notebook-line-1 {
+  top: 25px;
+}
+
+.notebook-line-2 {
+  top: 48px;
+}
+
+.notebook-line-3 {
+  top: 68px;
+}
+
+.notebook-line-4 {
+  top: 88px;
+}
+
+.notebook-line-5 {
+  top: 108px;
+}
+
+.notebook-line-6 {
+  top: 128px;
+}
+
+.notebook-line-7 {
+  top: 148px;
+}
+
+.notebook-line-8 {
+  top: 168px;
+}
+
+.notebook-line-9 {
+  top: 188px;
+}
+
+.notebook-line-10 {
+  top: 208px;
+}
+
+.notebook-line-11 {
+  top: 228px;
+}
+
+.notebook-line-12 {
+  top: 248px;
+}
+
+.notebook-line-13 {
+  top: 268px;
+}
+
+.notebook-line-14 {
+  top: 288px;
+}
+
+.notebook-line-15 {
+  top: 308px;
+}
+
+.notebook-line-16 {
+  top: 328px;
+}
+
+.notebook-lefts {
+  position: absolute;
+  width: 18px;
+  height: 359px;
+  top: 16px;
+  left: -16px;
+}
+
+.notebook-left {
+  position: absolute;
+  height: 11px;
+  width: 18px;
+  background-color: var(--notebook);
+  border-radius: 5px 0 0 5px;
+}
+
+.notebook-left-2 {
+  top: 32px;
+}
+
+.notebook-left-3 {
+  top: 64px;
+}
+
+.notebook-left-4 {
+  top: 96px;
+}
+
+.notebook-left-5 {
+  top: 128px;
+}
+
+.notebook-left-6 {
+  top: 160px;
+}
+
+.notebook-left-7 {
+  top: 192px;
+}
+
+.notebook-left-8 {
+  top: 224px;
+}
+
+.notebook-left-9 {
+  top: 256px;
+}
+
+.notebook-left-10 {
+  top: 288px;
+}
+
+.notebook-left-11 {
+  top: 320px;
+}
+
+.notebook-left-12 {
+  top: 352px;
+}
+
+.js-book-main {
+  position: absolute;
+  top: 65px;
+  left: 360px;
+  width: 254px;
+  height: 316px;
+  background-color: var(--js-book);
+  transform: rotate(-20deg);
+  border-radius: 10px 0 0 15px;
+}
+
+.js-book::after {
+  content: "";
+  width: 100px;
+  height: 140px;
+  position: absolute;
+  bottom: 107px;
+  left: 460px;
+  transform: rotate(305deg);
+  border-radius: 43% 57% 58% 42% / 47% 50% 50% 53%;
+  background-color: transparent;
+  border: solid 2px var(--mouse-wire);
+  border-color: transparent transparent transparent var(--mouse-wire);
+}
+
+.js-book-shadow-left {
+  position: absolute;
+  top: 105px;
+  left: 345px;
+  width: 16px;
+  height: 270px;
+  transform: rotate(-20deg);
+  background-color: var(--js-book-shadow);
+  border-top-left-radius: 15px;
+  mix-blend-mode: darken;
+}
+
+.js-book-shadow-top {
+  position: absolute;
+  left: 314px;
+  top: 90px;
+  height: 20px;
+  transform: rotate(160deg);
+  width: 116px;
+  background-color: var(--js-book-shadow);
+  mix-blend-mode: darken;
+}
+
+.js-book-text {
+  position: absolute;
+  top: 145px;
+  left: 530px;
+  font-size: 50px;
+  transform: rotate(-20deg);
+  color: var(--js-book-text);
+  bottom: 5px;
+  right: 10px;
+}
+
+.js-book-bottom {
+  position: absolute;
+  bottom: 209px;
+  left: 415px;
+  width: 248px;
+  height: 10px;
+  transform: rotate(-20deg);
+  background-color: var(--js-book-bottom);
+  border-radius: 0 0 0 20px;
+}
+
+.pen-left {
+  position: absolute;
+  transform: rotate(-60deg);
+  top: 375px;
+  left: 150px;
+}
+
+.pen-right {
+  position: absolute;
+  transform: rotate(30deg);
+  top: 80px;
+  left: 700px;
+}
+
+.pen-tip {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  top: -24.75px;
+  left: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 25px solid var(--pen);
+  outline: none;
+}
+
+.pen-top {
+  background-color: var(--pen);
+  width: 8px;
+  height: 140px;
+  border: none;
+}
+
+.pen-gap {
+  background-color: transparent;
+  width: 8px;
+  height: 5px;
+}
+
+.pen-bottom {
+  background-color: var(--pen);
+  width: 8px;
+  height: 25px;
+  border-radius: 0 0 10px 10px;
+}
+
+.keyboard {
+  position: absolute;
+  width: 335px;
+  height: 189px;
+  border-radius: 15px;
+  transform: rotate(16.72deg);
+  top: 200px;
+  left: 745px;
+  background-color: var(--keyboard);
+}
+
+.keyboard-top {
+  position: absolute;
+  width: 335px;
+  height: 5px;
+  top: 15px;
+  background-color: var(--keyboard-top);
+}
+
+.keyboard-buttons-strip-1 {
+  position: absolute;
+  background-color: transparent;
+  width: 335px;
+  height: 25px;
+  top: 30px;
+}
+
+.keyboard-buttons-strip-2 {
+  position: absolute;
+  background-color: transparent;
+  width: 335px;
+  height: 25px;
+  top: 70px;
+}
+
+.keyboard-buttons-strip-3 {
+  position: absolute;
+  background-color: transparent;
+  width: 335px;
+  height: 25px;
+  top: 110px;
+}
+
+.keyboard-buttons-strip-4 {
+  position: absolute;
+  background-color: transparent;
+  width: 335px;
+  height: 25px;
+  top: 150px;
+}
+
+.kbd-btn {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: var(--keyboard-buttons);
+}
+
+.kbd-btn-1,
+.kbd-btn-8,
+.kbd-btn-24 {
+  left: 15px;
+}
+
+.kbd-btn-2,
+.kbd-btn-9,
+.kbd-btn-25 {
+  left: 52px;
+}
+
+.kbd-btn-3,
+.kbd-btn-10,
+.kbd-btn-26 {
+  left: 89px;
+}
+
+.kbd-btn-4,
+.kbd-btn-11,
+.kbd-btn-27 {
+  left: 126px;
+}
+
+.kbd-btn-5,
+.kbd-btn-12 {
+  left: 163px;
+}
+
+.kbd-btn-6,
+.kbd-btn-13 {
+  left: 200px;
+}
+
+.kbd-btn-7,
+.kbd-btn-14 {
+  left: 237px;
+}
+
+.kbd-btn-15 {
+  left: 274px;
+}
+
+.kbd-btn-16 {
+  left: 15px;
+  width: 50px;
+}
+
+.kbd-btn-17 {
+  left: 72px;
+}
+
+.kbd-btn-18 {
+  left: 107px;
+}
+
+.kbd-btn-19 {
+  left: 144px;
+}
+
+.kbd-btn-20 {
+  left: 181px;
+}
+
+.kbd-btn-21 {
+  left: 218px;
+}
+
+.kbd-btn-22 {
+  left: 255px;
+}
+
+.kbd-btn-23 {
+  left: 292px;
+}
+
+.kbd-btn-27 {
+  width: 170px;
+}
+
+.mouse {
+  position: absolute;
+  width: 89px;
+  height: 54px;
+  background-color: var(--mouse);
+  top: 434px;
+  left: 531px;
+  border-radius: 5px;
+  transform: rotate(7deg);
+}
+
+.mouse::before {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: -2px;
+  width: 54px;
+  height: 2px;
+  transform: rotate(90deg);
+  background-color: var(--mouse-border);
+}
+
+.mouse::after {
+  content: "";
+  position: absolute;
+  top: 27.5px;
+  width: 25px;
+  height: 2px;
+  background-color: var(--mouse-border);
+}
